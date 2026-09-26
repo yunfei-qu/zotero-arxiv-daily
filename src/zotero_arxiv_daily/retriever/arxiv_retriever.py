@@ -114,7 +114,7 @@ class ArxivRetriever(BaseRetriever):
             raise ValueError("category must be specified for arxiv.")
 
     def _retrieve_raw_papers(self) -> list[ArxivResult]:
-        client = arxiv.Client(num_retries=10, delay_seconds=10, user_agent="zotero-arxiv-daily/1.0 (yunfei_qu@163.com))
+        client = arxiv.Client(num_retries=10, delay_seconds=10, user_agent="zotero-arxiv-daily/1.0 (yunfei_qu@163.com)")
         query = '+'.join(self.config.source.arxiv.category)
         include_cross_list = self.config.source.arxiv.get("include_cross_list", False)
         # Get the latest paper from arxiv rss feed
