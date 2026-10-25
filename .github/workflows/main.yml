@@ -2,8 +2,8 @@ name: Send emails daily
 on:
   workflow_dispatch:
   schedule:
-    # 06:00 UTC = 14:00 Beijing time, after arXiv's daily announcement
-    - cron: '0 6 * * *'
+    # 02:00 UTC = 10:00 Beijing time, after arXiv's daily announcement
+    - cron: '0 2 * * *'
 
 jobs:
   calculate-and-send:
